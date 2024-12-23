@@ -19,6 +19,16 @@
 18. [Explain Text Decoration in CSS with Example.](#18-explain-text-decoration-in-css-with-example)
 19. [Explain Attribute Selectors with Examples.](#19-explain-attribute-selectors-with-examples)
 20. [Explain GET and POST with Examples.](#20-explain-get-and-post-with-examples)
+21. [Explain Difference Between Inline, Block, and Inline-Block Elements.](#21-explain-difference-between-inline-block)
+22. [Explain Box Model in CSS with Example.](#22-explain-box-model-in-css-with-example)  
+23. [Explain the Difference Between Absolute and Relative Positioning in CSS.](#23-explain-the-difference-between-absolute-and-relative-positioning-in-css)  
+24. [Explain Float Property in CSS with Example.](#24-explain-float-property-in-css-with-example)  
+25. [Explain Difference Between Class and ID Selectors with Examples.](#25-explain-difference-between-class-and-id-selectors-with-examples)
+26. [Explain Inline, Internal, and External CSS with Examples.](#26-explain-inline-internal-and-external-css-with-examples)  
+27. [Explain Transition Property in CSS with Example.](#27-explain-transition-property-in-css-with-example)  
+28. [Explain Difference Between Relative and Fixed Positioning in CSS.](#28-explain-difference-between-relative-and-fixed-positioning-in-css)  
+29. [Explain Hover Effects with Examples.](#29-explain-hover-effects-with-examples)  
+
 
 ---
 
@@ -857,6 +867,628 @@ CSS Attribute Selectors target HTML elements based on the presence, value, or pa
 ### **20. Explain GET and POST with Examples.**
 
 This question is already addressed in [11. Explain GET and POST Methods with Examples.](#11-explain-get-and-post-methods-with-examples).
+
+---
+
+
+### **21. Explain Difference Between Inline, Block, and Inline-Block Elements.**
+
+**Definition:**
+HTML elements are categorized into three types based on their default display behavior: **inline**, **block**, and **inline-block**.
+
+| **Property**      | **Inline**                        | **Block**                             | **Inline-Block**                     |
+|--------------------|-----------------------------------|---------------------------------------|--------------------------------------|
+| **Default Behavior** | Does not start on a new line.    | Always starts on a new line.          | Does not start on a new line.        |
+| **Width/Height**   | Cannot set width/height.         | Can set width/height.                | Can set width/height.                |
+| **Use Case**       | Styling parts of text.           | Grouping large content sections.      | Combining inline and block behavior. |
+
+**Examples:**
+- **Inline**: `<span>`, `<a>`, `<strong>`
+- **Block**: `<div>`, `<p>`, `<section>`
+- **Inline-Block**: `<button>`, `<img>`
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline, Block, and Inline-Block</title>
+    <style>
+        .inline { display: inline; background-color: lightblue; }
+        .block { display: block; background-color: lightgreen; margin-bottom: 10px; }
+        .inline-block { display: inline-block; background-color: lightcoral; width: 100px; height: 50px; }
+    </style>
+</head>
+<body>
+    <span class="inline">Inline Element</span>
+    <div class="block">Block Element</div>
+    <span class="inline-block">Inline-Block Element</span>
+</body>
+</html>
+```
+
+**Output:**
+1. The **inline element** appears inline with surrounding text.
+2. The **block element** starts on a new line and takes full width.
+3. The **inline-block element** appears inline but respects width and height properties.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **22. Explain Box Model in CSS with Example.**
+
+**Definition:**
+The **Box Model** in CSS is a fundamental concept that explains how elements are wrapped with a combination of **content**, **padding**, **border**, and **margin**.
+
+**Components of the Box Model:**
+1. **Content**: The actual content area.
+2. **Padding**: The space between the content and the border.
+3. **Border**: The boundary surrounding the padding.
+4. **Margin**: The outermost spacing around the element.
+
+**Formula:**
+Total Width = Content Width + Padding (left + right) + Border (left + right) + Margin (left + right)  
+Total Height = Content Height + Padding (top + bottom) + Border (top + bottom) + Margin (top + bottom)
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model Example</title>
+    <style>
+        .box {
+            width: 150px;
+            height: 100px;
+            padding: 20px;
+            border: 5px solid black;
+            margin: 15px;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">Box Model</div>
+</body>
+</html>
+```
+
+**Output:**
+1. The element has a total width of `150px` (content) + `40px` (padding) + `10px` (border) + `30px` (margin) = **230px**.
+2. The height is calculated similarly.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **23. Explain the Difference Between Absolute and Relative Positioning in CSS.**
+
+| **Property**        | **Absolute Position**                     | **Relative Position**                     |
+|----------------------|-------------------------------------------|-------------------------------------------|
+| **Position**         | Relative to the nearest positioned ancestor. | Relative to its normal position in the document flow. |
+| **Document Flow**    | Removed from the normal document flow.   | Remains part of the document flow.        |
+| **Use Case**         | Ideal for tooltips, modals, or overlays.  | Best for slightly shifting an element from its original position. |
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Absolute vs Relative Position</title>
+    <style>
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 10px;
+            background-color: lightgreen;
+        }
+        .absolute {
+            position: absolute;
+            top: 50px;
+            left: 30px;
+            background-color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative">Relative Position</div>
+    <div class="absolute">Absolute Position</div>
+</body>
+</html>
+```
+
+**Output:**
+1. The relative element is shifted 20px down and 10px right from its original position.
+2. The absolute element is placed at (50px, 30px) relative to the parent or document body.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **24. Explain Float Property in CSS with Example.**
+
+**Definition:**
+The `float` property in CSS is used to position an element to the left or right within its container, allowing text or inline elements to wrap around it.
+
+**Values:**
+1. **left**: Floats the element to the left.
+2. **right**: Floats the element to the right.
+3. **none**: Default value, no floating.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Float Property Example</title>
+    <style>
+        .float-left {
+            float: left;
+            margin-right: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+        }
+        .float-right {
+            float: right;
+            margin-left: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="float-left">Left Float</div>
+    <div class="float-right">Right Float</div>
+    <p>This text will wrap around the floated elements.</p>
+</body>
+</html>
+```
+
+**Output:**
+- The first div floats to the left, with text wrapping around it.
+- The second div floats to the right.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **25. Explain Difference Between Class and ID Selectors with Examples.**
+
+| **Aspect**          | **Class Selector (`.class`)**            | **ID Selector (`#id`)**                 |
+|----------------------|------------------------------------------|-----------------------------------------|
+| **Uniqueness**       | Can be reused for multiple elements.     | Must be unique for a single element.    |
+| **Syntax**           | Starts with a period (`.`).              | Starts with a hash (`#`).               |
+| **Use Case**         | Common styling for a group of elements.  | Specific styling for a unique element.  |
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class vs ID Selector</title>
+    <style>
+        .common {
+            color: blue;
+            font-weight: bold;
+        }
+        #unique {
+            color: red;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <p class="common">This is a common style.</p>
+    <p id="unique">This is a unique style.</p>
+</body>
+</html>
+```
+
+**Output:**
+1. The paragraph with the `common` class is styled in bold blue.
+2. The paragraph with the `unique` ID is styled in italic red.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **26. Explain Inline, Internal, and External CSS with Examples.**
+
+**Definition:**
+CSS can be applied in three ways:
+1. **Inline CSS**: Directly within the HTML element using the `style` attribute.
+2. **Internal CSS**: Defined within a `<style>` tag in the HTML document’s `<head>`.
+3. **External CSS**: Written in a separate file and linked to the HTML document.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Types Example</title>
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Internal CSS */
+        .internal {
+            color: green;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <!-- Inline CSS -->
+    <p style="color: red;">This is styled using Inline CSS.</p>
+    
+    <!-- Internal CSS -->
+    <p class="internal">This is styled using Internal CSS.</p>
+    
+    <!-- External CSS -->
+    <p class="external">This is styled using External CSS.</p>
+</body>
+</html>
+```
+
+**Output:**
+1. Inline CSS styles the first paragraph in red.
+2. Internal CSS styles the second paragraph in green and italic.
+3. External CSS applies styles from the linked stylesheet to the third paragraph.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **27. Explain Transition Property in CSS with Example.**
+
+**Definition:**
+The `transition` property in CSS allows for smooth changes between property values over a specified duration.
+
+**Key Properties:**
+1. `transition-property`: Specifies the property to transition (e.g., `background-color`).
+2. `transition-duration`: Duration of the transition (e.g., `1s`).
+3. `transition-timing-function`: Specifies the speed curve (e.g., `ease`, `linear`).
+4. `transition-delay`: Time before the transition starts (e.g., `0.5s`).
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition Property Example</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            transition: background-color 1s ease, transform 0.5s;
+        }
+        .box:hover {
+            background-color: red;
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+```
+
+**Output:**
+When you hover over the blue box, it changes to red and scales up slightly, with a smooth transition effect.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **28. Explain Difference Between Relative and Fixed Positioning in CSS.**
+
+| **Property**        | **Relative Position**                     | **Fixed Position**                       |
+|----------------------|-------------------------------------------|------------------------------------------|
+| **Position**         | Relative to its normal position.          | Relative to the viewport.                |
+| **Scrolling**        | Moves along with the document.            | Stays fixed, even during scrolling.      |
+| **Use Case**         | Shifting elements slightly.               | Sticky headers, floating elements.       |
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relative vs Fixed Position</title>
+    <style>
+        .relative {
+            position: relative;
+            top: 20px;
+            left: 10px;
+            background-color: lightblue;
+        }
+        .fixed {
+            position: fixed;
+            top: 0;
+            right: 0;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="relative">Relative Position</div>
+    <div class="fixed">Fixed Position</div>
+</body>
+</html>
+```
+
+**Output:**
+1. The **relative element** is shifted 20px down and 10px right from its normal position.
+2. The **fixed element** remains in the top-right corner of the viewport, even when scrolling.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **29. Explain Hover Effects with Examples.**
+
+**Definition:**
+The `:hover` pseudo-class in CSS is used to apply styles to an element when the user hovers over it with a mouse.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effects Example</title>
+    <style>
+        .button {
+            padding: 10px 20px;
+            background-color: blue;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="button">Hover Me</a>
+</body>
+</html>
+```
+
+**Output:**
+When hovering over the button, the background color smoothly changes to dark blue.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+## **Table of Contents (Updated)**
+
+30. [Explain Pseudo-Classes with Examples.](#30-explain-pseudo-classes-with-examples)  
+31. [Explain Flexbox and Its Properties with Examples.](#31-explain-flexbox-and-its-properties-with-examples)  
+32. [Explain Media Queries with Examples.](#32-explain-media-queries-with-examples)  
+33. [Explain Difference Between Em and Rem Units in CSS.](#33-explain-difference-between-em-and-rem-units-in-css)  
+
+---
+
+### **30. Explain Pseudo-Classes with Examples.**
+
+**Definition:**
+Pseudo-classes in CSS define the special state of an element. They allow you to style elements based on user interaction, their position in the document, or specific conditions.
+
+**Examples of Pseudo-Classes:**
+1. **`:hover`**: Applies styles when the user hovers over an element.
+2. **`:focus`**: Applies styles when an element gains focus (e.g., input fields).
+3. **`:nth-child()`**: Targets specific children of a parent element.
+4. **`:first-child` and `:last-child`**: Styles the first or last child of a parent.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes Example</title>
+    <style>
+        a:hover {
+            color: red;
+        }
+        input:focus {
+            border: 2px solid blue;
+        }
+        li:nth-child(2) {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Hover over me</a>
+    <br><br>
+    <input type="text" placeholder="Focus on me">
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+</body>
+</html>
+```
+
+**Output:**
+1. The link changes color when hovered.
+2. The input field’s border turns blue when focused.
+3. The second list item is styled with a gray background.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **31. Explain Flexbox and Its Properties with Examples.**
+
+**Definition:**
+The **Flexible Box Layout (Flexbox)** in CSS is a layout model designed for efficient alignment and distribution of items within a container, even when their sizes are dynamic.
+
+**Key Flexbox Properties:**
+1. **`display: flex`**: Defines a flex container.
+2. **`flex-direction`**: Defines the direction of the main axis (row, column).
+3. **`justify-content`**: Aligns items along the main axis (center, space-between).
+4. **`align-items`**: Aligns items along the cross axis (stretch, center).
+5. **`flex-wrap`**: Wraps items onto multiple lines if necessary.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>
+```
+
+**Output:**
+The three items are spaced evenly along the main axis and aligned at the center of the container.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **32. Explain Media Queries with Examples.**
+
+**Definition:**
+Media queries in CSS enable responsive design by applying styles based on the screen’s size, resolution, or orientation.
+
+**Syntax:**
+```css
+@media (condition) {
+    /* CSS rules */
+}
+```
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Example</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        @media (max-width: 600px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Resize the window to see the effect!</h1>
+</body>
+</html>
+```
+
+**Output:**
+The background color changes to light green when the viewport width is 600px or smaller.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **33. Explain Difference Between Em and Rem Units in CSS.**
+
+| **Aspect**        | **Em Unit**                               | **Rem Unit**                              |
+|--------------------|-------------------------------------------|-------------------------------------------|
+| **Definition**     | Relative to the font size of the parent.  | Relative to the root element's font size. |
+| **Dependency**     | Depends on the parent element.            | Consistent throughout the document.       |
+| **Use Case**       | Useful for nested scaling.                | Preferred for consistent scaling.         |
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em vs Rem</title>
+    <style>
+        html {
+            font-size: 16px; /* 1rem = 16px */
+        }
+        .parent {
+            font-size: 20px; /* 1em = 20px */
+        }
+        .child-em {
+            font-size: 1.5em; /* 1.5 * 20px = 30px */
+        }
+        .child-rem {
+            font-size: 1.5rem; /* 1.5 * 16px = 24px */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent (20px)
+        <div class="child-em">Child with Em (30px)</div>
+        <div class="child-rem">Child with Rem (24px)</div>
+    </div>
+</body>
+</html>
+```
+
+**Output:**
+1. The em-based child scales relative to the parent’s font size.
+2. The rem-based child scales consistently relative to the root font size.
+
+⇧ [Back to Table of Contents](#table-of-contents)
 
 ---
 
