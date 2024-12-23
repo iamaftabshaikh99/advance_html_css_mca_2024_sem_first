@@ -166,13 +166,6 @@ HTML lists are used to group related items. An ordered list displays items in a 
 ---
 
 
-## **Table of Contents**
-1. [What is CSS? Explain types of CSS.](#1-what-is-css-explain-types-of-css)
-2. [Explain Anchor Tag with Example.](#2-explain-anchor-tag-with-example)
-3. [Explain Ordered and Unordered Lists with Examples.](#3-explain-ordered-and-unordered-lists-with-examples)
-
-
----
 
 ### **4. Explain Background-Image in CSS with Example.**
 
@@ -429,10 +422,6 @@ The `border` property in CSS is used to define the style, width, and color of an
 The element displays a red border with a width of 5px.
 
 ⇧ [Back to Table of Contents](#table-of-contents)
-
----
-
-Here’s the continuation with detailed answers following the priority set in the question bank. I'll focus on high-priority questions first and ensure the answers are comprehensive and detailed.
 
 ---
 
