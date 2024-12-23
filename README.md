@@ -27,7 +27,17 @@
 26. [Explain Inline, Internal, and External CSS with Examples.](#26-explain-inline-internal-and-external-css-with-examples)  
 27. [Explain Transition Property in CSS with Example.](#27-explain-transition-property-in-css-with-example)  
 28. [Explain Difference Between Relative and Fixed Positioning in CSS.](#28-explain-difference-between-relative-and-fixed-positioning-in-css)  
-29. [Explain Hover Effects with Examples.](#29-explain-hover-effects-with-examples)  
+29. [Explain Hover Effects with Examples.](#29-explain-hover-effects-with-examples)
+30. [Explain Pseudo-Classes with Examples.](#30-explain-pseudo-classes-with-examples)  
+31. [Explain Flexbox and Its Properties with Examples.](#31-explain-flexbox-and-its-properties-with-examples)  
+32. [Explain Media Queries with Examples.](#32-explain-media-queries-with-examples)  
+33. [Explain Difference Between Em and Rem Units in CSS.](#33-explain-difference-between-em-and-rem-units-in-css)  
+34. [Explain Grid Layout in CSS with Examples.](#34-explain-grid-layout-in-css-with-examples)  
+35. [Explain Difference Between Visibility and Display in CSS.](#35-explain-difference-between-visibility-and-display-in-css)  
+36. [Explain CSS Animations with Examples.](#36-explain-css-animations-with-examples)  
+37. [Explain Difference Between Inline and Block Elements.](#37-explain-difference-between-inline-and-block-elements)  
+
+
 
 
 ---
@@ -1491,5 +1501,392 @@ The background color changes to light green when the viewport width is 600px or 
 ⇧ [Back to Table of Contents](#table-of-contents)
 
 ---
+
+
+### **30. Explain Pseudo-Classes with Examples.**
+
+**Definition:**
+Pseudo-classes in CSS define the special state of an element. They allow you to style elements based on user interaction, their position in the document, or specific conditions.
+
+**Examples of Pseudo-Classes:**
+1. **`:hover`**: Applies styles when the user hovers over an element.
+2. **`:focus`**: Applies styles when an element gains focus (e.g., input fields).
+3. **`:nth-child()`**: Targets specific children of a parent element.
+4. **`:first-child` and `:last-child`**: Styles the first or last child of a parent.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes Example</title>
+    <style>
+        a:hover {
+            color: red;
+        }
+        input:focus {
+            border: 2px solid blue;
+        }
+        li:nth-child(2) {
+            background-color: lightgray;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">Hover over me</a>
+    <br><br>
+    <input type="text" placeholder="Focus on me">
+    <ul>
+        <li>First Item</li>
+        <li>Second Item</li>
+        <li>Third Item</li>
+    </ul>
+</body>
+</html>
+```
+
+**Output:**
+1. The link changes color when hovered.
+2. The input field’s border turns blue when focused.
+3. The second list item is styled with a gray background.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **31. Explain Flexbox and Its Properties with Examples.**
+
+**Definition:**
+The **Flexible Box Layout (Flexbox)** in CSS is a layout model designed for efficient alignment and distribution of items within a container, even when their sizes are dynamic.
+
+**Key Flexbox Properties:**
+1. **`display: flex`**: Defines a flex container.
+2. **`flex-direction`**: Defines the direction of the main axis (row, column).
+3. **`justify-content`**: Aligns items along the main axis (center, space-between).
+4. **`align-items`**: Aligns items along the cross axis (stretch, center).
+5. **`flex-wrap`**: Wraps items onto multiple lines if necessary.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 200px;
+            background-color: lightblue;
+        }
+        .item {
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+    </div>
+</body>
+</html>
+```
+
+**Output:**
+The three items are spaced evenly along the main axis and aligned at the center of the container.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **32. Explain Media Queries with Examples.**
+
+**Definition:**
+Media queries in CSS enable responsive design by applying styles based on the screen’s size, resolution, or orientation.
+
+**Syntax:**
+```css
+@media (condition) {
+    /* CSS rules */
+}
+```
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Queries Example</title>
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        @media (max-width: 600px) {
+            body {
+                background-color: lightgreen;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Resize the window to see the effect!</h1>
+</body>
+</html>
+```
+
+**Output:**
+The background color changes to light green when the viewport width is 600px or smaller.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **33. Explain Difference Between Em and Rem Units in CSS.**
+
+| **Aspect**        | **Em Unit**                               | **Rem Unit**                              |
+|--------------------|-------------------------------------------|-------------------------------------------|
+| **Definition**     | Relative to the font size of the parent.  | Relative to the root element's font size. |
+| **Dependency**     | Depends on the parent element.            | Consistent throughout the document.       |
+| **Use Case**       | Useful for nested scaling.                | Preferred for consistent scaling.         |
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em vs Rem</title>
+    <style>
+        html {
+            font-size: 16px; /* 1rem = 16px */
+        }
+        .parent {
+            font-size: 20px; /* 1em = 20px */
+        }
+        .child-em {
+            font-size: 1.5em; /* 1.5 * 20px = 30px */
+        }
+        .child-rem {
+            font-size: 1.5rem; /* 1.5 * 16px = 24px */
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        Parent (20px)
+        <div class="child-em">Child with Em (30px)</div>
+        <div class="child-rem">Child with Rem (24px)</div>
+    </div>
+</body>
+</html>
+```
+
+**Output:**
+1. The em-based child scales relative to the parent’s font size.
+2. The rem-based child scales consistently relative to the root font size.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **34. Explain Grid Layout in CSS with Examples.**
+
+**Definition:**
+CSS Grid Layout is a powerful layout system designed for two-dimensional (rows and columns) web layouts. It allows the placement of items in a grid with explicit control over rows, columns, and gaps.
+
+**Key Properties:**
+1. **`display: grid`**: Defines a grid container.
+2. **`grid-template-rows` and `grid-template-columns`**: Define the size of rows and columns.
+3. **`gap`**: Specifies the spacing between grid items.
+4. **`grid-area`**: Allows an item to span multiple rows or columns.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Layout Example</title>
+    <style>
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: auto 100px;
+            gap: 10px;
+            background-color: lightgray;
+        }
+        .grid-item {
+            background-color: coral;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>
+        <div class="grid-item">4</div>
+    </div>
+</body>
+</html>
+```
+
+**Output:**
+1. A grid layout with two columns, where the second column is twice as wide as the first.
+2. Items are spaced with a 10px gap.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **35. Explain Difference Between Visibility and Display in CSS.**
+
+| **Aspect**        | **Visibility**                              | **Display**                               |
+|--------------------|---------------------------------------------|-------------------------------------------|
+| **Definition**     | Determines if an element is visible or hidden. | Controls if an element is rendered or removed from the layout. |
+| **Values**         | `visible`, `hidden`.                       | `block`, `none`, `inline`, etc.           |
+| **Effect**         | Hidden elements still occupy space.         | Elements set to `none` do not occupy space. |
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visibility vs Display</title>
+    <style>
+        .visible {
+            visibility: hidden;
+        }
+        .display {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <p class="visible">I am hidden but still occupy space.</p>
+    <p class="display">I am not rendered at all.</p>
+</body>
+</html>
+```
+
+**Output:**
+1. The first paragraph is invisible but still affects layout spacing.
+2. The second paragraph is entirely removed from the document flow.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **36. Explain CSS Animations with Examples.**
+
+**Definition:**
+CSS animations enable dynamic transitions between states without requiring JavaScript. They are defined using `@keyframes` and applied with animation-related properties.
+
+**Key Properties:**
+1. **`@keyframes`**: Defines the animation sequence.
+2. **`animation-name`**: Specifies the name of the animation.
+3. **`animation-duration`**: Defines the duration of the animation.
+4. **`animation-iteration-count`**: Specifies the number of times the animation should repeat.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Animations Example</title>
+    <style>
+        @keyframes move {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(50px);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+        .box {
+            width: 50px;
+            height: 50px;
+            background-color: coral;
+            animation: move 2s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+```
+
+**Output:**
+The box moves horizontally back and forth in a loop.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **37. Explain Difference Between Inline and Block Elements.**
+
+| **Aspect**        | **Inline Elements**                         | **Block Elements**                       |
+|--------------------|---------------------------------------------|------------------------------------------|
+| **Display**        | Stays inline with surrounding content.      | Starts on a new line.                    |
+| **Width**          | Width depends on content.                  | Takes full width of the parent.          |
+| **Examples**       | `<span>`, `<a>`, `<strong>`.                | `<div>`, `<p>`, `<section>`.             |
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inline vs Block</title>
+    <style>
+        .block {
+            background-color: lightblue;
+        }
+        .inline {
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="block">Block Element</div>
+    <span class="inline">Inline Element</span>
+</body>
+</html>
+```
+
+**Output:**
+1. The block element spans the full width of the container.
+2. The inline element stays within its content width.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+
 
 
