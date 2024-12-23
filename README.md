@@ -15,7 +15,10 @@
 14. [Explain Background-Repeat in CSS with Example.](#14-explain-background-repeat-in-css-with-example)
 15. [Explain CSS Selectors with Examples.](#15-explain-css-selectors-with-examples)
 16. [Explain Difference Between Div and Span.](#16-explain-difference-between-div-and-span)
-    
+17. [Explain Position Property with Examples.](#17-explain-position-property-with-examples)
+18. [Explain Text Decoration in CSS with Example.](#18-explain-text-decoration-in-css-with-example)
+19. [Explain Attribute Selectors with Examples.](#19-explain-attribute-selectors-with-examples)
+20. [Explain GET and POST with Examples.](#20-explain-get-and-post-with-examples)
 
 ---
 
@@ -709,26 +712,6 @@ CSS Selectors are patterns used to select and style specific HTML elements.
 
 ---
 
-## **Table of Contents**
-1. [What is CSS? Explain types of CSS.](#1-what-is-css-explain-types-of-css)
-2. [Explain Anchor Tag with Example.](#2-explain-anchor-tag-with-example)
-3. [Explain Ordered and Unordered Lists with Examples.](#3-explain-ordered-and-unordered-lists-with-examples)
-4. [Explain Background-Image in CSS with Example.](#4-explain-background-image-in-css-with-example)
-5. [Explain Text Decoration Property in CSS with Example.](#5-explain-text-decoration-property-in-css-with-example)
-6. [Explain Z-Index with Example.](#6-explain-z-index-with-example)
-7. [What is HREF? Demonstrate how to traverse between pages.](#7-what-is-href-demonstrate-how-to-traverse-between-pages)
-8. [Explain Padding and Margin with Examples.](#8-explain-padding-and-margin-with-examples)
-9. [Explain Client & Server-Side Image Mapping with Examples.](#9-explain-client-server-side-image-mapping-with-examples)
-10. [Explain Border Property with Examples.](#10-explain-border-property-with-examples)
-11. [Explain GET and POST Methods with Examples.](#11-explain-get-and-post-methods-with-examples)
-12. [Explain Overflow in CSS with Example.](#12-explain-overflow-in-css-with-example)
-13. [Explain Vertical Align in CSS with Example.](#13-explain-vertical-align-in-css-with-example)
-14. [Explain Background-Repeat in CSS with Example.](#14-explain-background-repeat-in-css-with-example)
-15. [Explain CSS Selectors with Examples.](#15-explain-css-selectors-with-examples)
-16. [Explain Difference Between Div and Span.](#16-explain-difference-between-div-and-span)
-
-
----
 
 ### **17. Explain Position Property with Examples.**
 
@@ -819,6 +802,61 @@ The `text-decoration` property specifies how text is styled in terms of underlin
 4. The fourth paragraph has no decoration.
 
 ⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+
+### **19. Explain Attribute Selectors with Examples.**
+
+**Definition:**
+CSS Attribute Selectors target HTML elements based on the presence, value, or pattern of their attributes.
+
+**Types of Attribute Selectors:**
+1. **[attr]**: Selects elements with the specified attribute.
+2. **[attr=value]**: Selects elements where the attribute matches the specified value.
+3. **[attr~=value]**: Selects elements where the attribute contains the specified word.
+4. **[attr|=value]**: Selects elements with a specific value or starting with it.
+5. **[attr^=value]**: Selects elements where the attribute starts with the specified value.
+6. **[attr$=value]**: Selects elements where the attribute ends with the specified value.
+7. **[attr*=value]**: Selects elements where the attribute contains the specified value.
+
+**HTML Script:**
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attribute Selectors Example</title>
+    <style>
+        [title] { color: blue; } /* Any element with a title attribute */
+        [title="specific"] { font-weight: bold; } /* Title matches "specific" */
+        [href^="https"] { text-decoration: underline; } /* Links starting with "https" */
+        [class*="highlight"] { background-color: yellow; } /* Class containing "highlight" */
+    </style>
+</head>
+<body>
+    <p title="general">This is a paragraph with a title.</p>
+    <p title="specific">This is a bold paragraph.</p>
+    <a href="https://example.com">Secure Link</a>
+    <p class="text-highlight">Highlighted Text</p>
+</body>
+</html>
+```
+
+**Output:**
+1. The first `<p>` with a title attribute is styled in blue.
+2. The second `<p>` with the title "specific" is bold.
+3. Links starting with `https` are underlined.
+4. Text with "highlight" in its class has a yellow background.
+
+⇧ [Back to Table of Contents](#table-of-contents)
+
+---
+
+### **20. Explain GET and POST with Examples.**
+
+This question is already addressed in [11. Explain GET and POST Methods with Examples.](#11-explain-get-and-post-methods-with-examples).
 
 ---
 
