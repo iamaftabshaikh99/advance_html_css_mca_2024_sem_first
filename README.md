@@ -44,11 +44,6 @@
 
 ---
 
-This comprehensive Table of Contents is ready for inclusion in your documentation or GitHub repository. Let me know if you need any further help!
-
-
-
----
 
 ### **1. What is CSS? Explain types of CSS.**
 
